@@ -16,16 +16,29 @@
     $oripn = $_POST["oripn"];
     $sql = "UPDATE fp SET hersteller = '$her',".
     "typ = '$typ', gb= '$gb', ".
-    "preis = '$preis', artnummer = '$artnummer'".
+    "preis = '$preis', artnummer = '$artnummer',".
     "prod = '$prod'".
     "WHERE artnummer = '$oripn' ";
     mysqli_query($con,$sql);
 
-    var_dump($con);
-    echo "\n --- <br> <br>";
-    var_dump($sql);
-    echo "\n --- <br> <br>"; 
-    var_dump($oripn);
+    // echo $her;
+    // echo "\n <br>";
+    // echo "$typ";
+    // echo "\n <br>";
+    // echo $gb;
+    // echo "\n <br>";
+    // echo $preis;
+    // echo "\n <br>";
+    // var_dump($artnummer);
+    // echo "\n <br>";
+    // echo $prod;
+    // echo "\n <br> <br> \-----/";
+    // echo $oripn;
+    // // var_dump($con);
+    // echo "\n --- <br> <br>";
+    // var_dump($sql);
+    // echo "\n --- <br> <br>"; 
+    // var_dump($oripn);
     $num = mysqli_affected_rows($con);
     if($num > 0) echo "Betroffen: $num<br>";
     else         echo "Betroffen: 0 <br>";
